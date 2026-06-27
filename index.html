@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalTech Contract Constructor | Alfa-Beta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Alfa-LegalTech 🤖</div>
+            <h1>Конструктор коммерческих соглашений (NDA)</h1>
+            <p class="subtitle">Автоматизация комплаенса и генерации документов для продуктовых команд</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Левая часть: Форма ввода параметров -->
+            <section class="form-section">
+                <h2>1. Параметры сделки</h2>
+                <form id="contractForm">
+                    <div class="form-group">
+                        <label for="clientType">Тип контрагента (Субъектный состав):</label>
+                        <select id="clientType">
+                            <option value="b2b">Юридическое лицо / ИП (B2B)</option>
+                            <option value="b2c">Физическое лицо / Фрилансер (B2C)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="partyName">Наименование контрагента:</label>
+                        <input type="text" id="partyName" placeholder="ООО 'Вектор' или ИНН / ФИО фрилансера" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="penaltyAmount">Размер штрафа за разглашение (₽):</label>
+                        <input type="number" id="penaltyAmount" value="500000" step="50000">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="includeArbitration" checked>
+                        <label for="includeArbitration">Включить условие об Арбитражном суде г. Москвы</label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="personalData" checked>
+                        <label for="personalData">Добавить оговорку о защите ПДн (ФЗ-152)</label>
+                    </div>
+
+                    <button type="button" id="generateBtn" class="btn">Сгенерировать документ</button>
+                </form>
+            </section>
+
+            <!-- Правая часть: Результат (Документ) -->
+            <section class="preview-section">
+                <h2>2. Предпросмотр документа</h2>
+                <div class="document-box" id="documentOutput">
+                    <p class="placeholder-text">Заполните форму слева и нажмите кнопку «Сгенерировать документ»</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
