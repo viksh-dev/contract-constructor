@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аналитика рисков | Alfa-LegalTech</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav class="top-nav">
         <div class="nav-container">
-            <div class="nav-brand">Alfa-LegalTech</div>
+            <div class="nav-brand"><i class="fa-solid fa-shield-halved"></i> Alfa-LegalTech</div>
             <ul class="nav-menu">
                 <li><a href="index.html">Конструктор NDA</a></li>
                 <li><a href="templates.html">Шаблоны документов</a></li>
@@ -18,212 +20,178 @@
         </div>
     </nav>
 
-    <div class="container">
-        <header>
-            <p class="subtitle">Система автоматического комплаенса и скоринга договоров</p>
-            <h1>Аналитическая панель оценки рисков</h1>
+    <div class="container" style="max-width: 1400px; padding: 40px 20px;">
+        <header style="margin-bottom: 40px;">
+            <p class="subtitle" style="color: #7A1C1C; text-transform: uppercase; letter-spacing: 2px; font-weight: bold; margin-bottom: 5px;">
+                <i class="fa-solid fa-chart-line"></i> Модуль скриннинга и предиктивной аналитики
+            </p>
+            <h1 style="font-size: 32px; margin: 0; color: #2C2C2C;">Панель автоматического комплаенс-контроля</h1>
         </header>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px;">
-            <div class="card-item" style="margin: 0; text-align: center; border-top: 4px solid #7A1C1C;">
-                <h3 style="color: #666; font-size: 14px; text-transform: uppercase;">Средний уровень риска</h3>
-                <p style="font-size: 36px; font-weight: bold; color: #7A1C1C; margin: 10px 0;">24%</p>
-                <span style="color: #2e7d32; font-size: 12px;">● Низкий показатель</span>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 40px;">
+            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; border-left: 5px solid #c62828; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 14px;">
+                    <span>КРИТИЧЕСКИЕ УЯЗВИМОСТИ</span>
+                    <i class="fa-solid fa-triangle-exclamation" style="color: #c62828;"></i>
+                </div>
+                <p style="font-size: 32px; font-weight: bold; margin: 10px 0; color: #2C2C2C;">14</p>
+                <span style="color: #c62828; font-size: 12px; font-weight: bold;"><i class="fa-solid fa-arrow-up"></i> +3 за неделю</span>
             </div>
-            <div class="card-item" style="margin: 0; text-align: center; border-top: 4px solid #7A1C1C;">
-                <h3 style="color: #666; font-size: 14px; text-transform: uppercase;">Проверено документов</h3>
-                <p style="font-size: 36px; font-weight: bold; color: #2C2C2C; margin: 10px 0;">1,420</p>
-                <span style="color: #666; font-size: 12px;">За текущий квартал</span>
+            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; border-left: 5px solid #2e7d32; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 14px;">
+                    <span>ИНДЕКС ЗДОРОВЬЯ ДОКУМЕНТОВ</span>
+                    <i class="fa-solid fa-heart-pulse" style="color: #2e7d32;"></i>
+                </div>
+                <p style="font-size: 32px; font-weight: bold; margin: 10px 0; color: #2C2C2C;">84.2%</p>
+                <span style="color: #2e7d32; font-size: 12px; font-weight: bold;"><i class="fa-solid fa-circle-check"></i> Стабильно высокий</span>
             </div>
-            <div class="card-item" style="margin: 0; text-align: center; border-top: 4px solid #7A1C1C;">
-                <h3 style="color: #666; font-size: 14px; text-transform: uppercase;">Заблокировано утечек</h3>
-                <p style="font-size: 36px; font-weight: bold; color: #2c3e50; margin: 10px 0;">89</p>
-                <span style="color: #c62828; font-size: 12px;">Критические оговорки</span>
+            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; border-left: 5px solid #1565c0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 14px;">
+                    <span>ПРОВЕРЕНО ЗА МЕСЯЦ</span>
+                    <i class="fa-solid fa-file-invoice" style="color: #1565c0;"></i>
+                </div>
+                <p style="font-size: 32px; font-weight: bold; margin: 10px 0; color: #2C2C2C;">2,840</p>
+                <span style="color: #666; font-size: 12px;">Контракты & NDA</span>
             </div>
-            <div class="card-item" style="margin: 0; text-align: center; border-top: 4px solid #7A1C1C;">
-                <h3 style="color: #666; font-size: 14px; text-transform: uppercase;">Экономия на штрафах</h3>
-                <p style="font-size: 36px; font-weight: bold; color: #2e7d32; margin: 10px 0;">42.5M ₽</p>
-                <span style="color: #2e7d32; font-size: 12px;">Предотвращенные иски</span>
+            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; border-left: 5px solid #ef6c00; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 14px;">
+                    <span>СЭКОНОМЛЕНО НА ШТРАФАХ</span>
+                    <i
+
+
+class="fa-solid fa-gavel" style="color: #ef6c00;"></i>
+                </div>
+                <p style="font-size: 32px; font-weight: bold; margin: 10px 0; color: #2C2C2C;">18.4M ₽</p>
+                <span style="color: #2e7d32; font-size: 12px; font-weight: bold;"><i class="fa-solid fa-shield"></i> Риски заблокированы</span>
             </div>
         </div>
 
-        <div class="main-content">
-            <section style="background: transparent; border: none; padding: 0;">
-                
-                <h2>Матрица автоматических триггеров и стоп-слов</h2>
-                <p style="color: #666666; margin-bottom: 20px;">Инструмент сканирует текст соглашения и моментально выявляет скрытые юридические ловушки.</p>
-
-                <table style="width: 100%; border-collapse: collapse; background: #ffffff; border: 1px solid #E0E0E0; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                    <thead>
-                        <tr style="background: #F9F9F9; border-bottom: 2px solid #E0E0E0; text-align: left;">
-                            <th style="padding: 15px; color: #2C2C2C; font-weight: bold;">ID</th>
-                            <th style="padding: 15px; color: #2C2C2C; font-weight: bold;">Триггер / Оговорка</th>
-                            <th style="padding: 15px; color: #2C2C2C; font-weight: bold;">Класс опасности</th>
-                            <th style="padding: 15px; color: #2C2C2C; font-weight: bold;">Рекомендация по изменению</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #E0E0E0;">
-                            <td style=
-
-
-ottom: 1px solid #E0E0E0;">
-                            <td style="padding: 15px; font-weight: bold; color: #7A1C1C;">TR-006</td>
-                            <td style="padding: 15px;"><strong>«Автоматическое признание всей переписки секретной»</strong>
-<small style="color:#888;">Отсутствие грифа Коммерческой тайны на отправляемых письмах.</small></td>
-                            <td style="padding: 15px;"><span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">УМЕРЕННЫЙ</span></td>
-                            <td style="padding: 15px; color: #555;">Внедрить обязательную маркировку писем тегом CONFIDENTIAL в теме сообщения для автоматической работы почтового шлюза фильтрации.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #E0E0E0;">
-                            <td style="padding: 15px; font-weight: bold; color: #7A1C1C;">TR-007</td>
-                            <td style="padding: 15px;"><strong>«Передача исходных кодов без фиксации коммитов»</strong>
-<small style="color:#888;">Отсутствие привязки ТЗ к SHA-хэшам репозиториев Git.</small></td>
-                            <td style="padding: 15px;"><span style="background: #ffebee; color: #c62828; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">КРИТИЧЕСКИЙ</span></td>
-                            <td style="padding: 15px; color: #555;">Прописать в договоре обязательное указание хэшей финальных коммитов в Актах приема-передачи для точной идентификации защищаемого объекта интеллектуальной собственности.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h2>Комплексный справочник классификации рисков (Реестр нормативного комплаенса)</h2>
-                <p style="color: #666666; margin-bottom: 20px;">Детальные расшифровки регуляторных требований для финансовых, технологических и продуктовых стартапов.</p>
-
-                <div class="card-item">
-                    <span class="badge">Карта №RC-101</span>
-                    <h3>Соответствие требованиям Федерального закона №152-ФЗ «О персональных данных»</h3>
-                    <p style="color: #666666; font-size: 14px; margin-top: 5px;">Анализ уязвимостей систем хранения данных клиентов, трансграничной передачи и локализации баз данных.</p>
-                    <div style="font-size:12px; color:#888; margin-top:10px; font-family:'Times New Roman', serif; border-top:1px dashed #ccc; padding-top:10px;">
-                        <strong>Ключевые факторы проверки:</strong> Наличие явных и осознанных согласий пользователей на обработку данных. Использование сертифицированных средств криптографической защиты информации. Назначение ответственного за обработку персональных данных в организации. Проведение внутренних проверок режима безопасности не реже одного раза в год.
-                    </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            
+            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h3 style="margin-top: 0; color: #2C2C2C; margin-bottom: 20px;"><i class="fa-solid fa-chart-area"></i> Динамика выявления рисков (2026)</h3>
+                <div style="position: relative; height: 300px; width: 100%;">
+                    <canvas id="lineChart"></canvas>
                 </div>
+            </div>
 
-                <div class="card-item">
-                    <span class="badge">Карта №RC-102</span>
-                    <h3>Соответствие Общему регламенту по защите данных Европейского Союза (GDPR Compliance)</h3>
-                    <p style="color: #666666; font-size: 14px; margin-top: 5px;">Оценка рисков для продуктов, оперирующих на международном рынке или обрабатывающих данные резидентов ЕС.</p>
-                    <div style="font-size:12px; color:#888; margin-top:10px; font-family:'Times New Roman', serif; border-top:1px dashed #ccc; padding-top:10px;">
-                        <strong>Ключевые факторы проверки:</strong> Реализация принципов Privacy by Design и Privacy by Default. Наличие процедур беспрепятственного удаления данных (Right to be Forgotten). Ведение реестра операций по обработке данных (RoPA). Назначение Data Protection Officer (DPO) при масштабной обработке специальных категорий данных.
-                    </div>
+            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h3 style="margin-top: 0; color: #2C2C2C; margin-bottom: 20px;"><i class="fa-solid fa-chart-pie"></i> Топовые категории уязвимостей</h3>
+                <div style="position: relative; height: 300px; width: 100%; display: flex; justify-content: center;">
+                    <canvas id="doughnutChart"></canvas>
                 </div>
+            </div>
 
-                <div class="card-item">
-                    <span class="badge">Карта №RC-103</span>
-                    <h3>Комплаенс Федеральной антимонопольной слу
+        </div>
 
-
-жбы (Контроль рекламы и картельных сговоров)</h3>
-                    <p style="color: #666666; font-size: 14px; margin-top: 5px;">Проверка маркетинговых материалов, оферт и договоров дистрибьюторов на соответствие закону «О защите конкуренции».</p>
-                    <div style="font-size:12px; color:#888; margin-top:10px; font-family:'Times New Roman', serif; border-top:1px dashed #ccc; padding-top:10px;">
-                        <strong>Ключевые факторы проверки:</strong> Запрет на установление фиксированных цен перепродажи для независимых дистрибьюторов. Отсутствие в договорах дискриминационных условий доступа на рынок. Исключение некорректных сравнений с конкурентами («номер один», «лучший» без независимых подтвержденных исследований).
-                    </div>
+        <div style="background: #ffffff; border: 1px solid #E0E0E0; border-radius: 8px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+                <div>
+                    <h2 style="margin: 0; font-size: 22px; color: #2C2C2C;">Реестр нормативных триггеров комплаенса</h2>
+                    <p style="color: #666666; margin: 5px 0 0 0; font-size: 14px;">Система автоматически вырезает опасные формулировки на основе AI-базы знаний.</p>
                 </div>
+                <span style="background: #f1f5f9; padding: 8px 15px; border-radius: 6px; font-size: 13px; font-weight: bold; color: #475569; border: 1px solid #cbd5e1;">
+                    <i class="fa-solid fa-database"></i> База данных: Активна (v4.12)
+                </span>
+            </div>
 
-                <h2>База прецедентов и судебных споров по утечкам коммерческой тайны</h2>
-                
-                <div class="card-item">
-                    <span class="badge">Дело №А40-19283/2024</span>
-                    <h3>Разглашение исходного кода ядра рекомендательной системы</h3>
-                    <p style="color: #666666; font-size: 14px; margin-top: 5px;">Истец: Крупный финтех-оператор. Ответчик: Бывший ведущий разработчик (архитектор).</p>
-                    <div style="font-size:12px; color:#555; margin-top:10px; background: #fafafa; padding: 10px; border-left: 3px solid #7A1C1C;">
-                        <strong>Суть спора:</strong> Разработчик выложил фрагмент приватного репозитория на личный аккаунт GitHub. Компания зафиксировала факт утечки с помощью DLP-системы и нотариально заверила скриншоты коммитов. Суд встал на сторону истца, так как в компании был введен строгий режим коммерческой тайны, а в трудовом договоре был зафиксирован SHA-хэш исходной архитектуры. Взыскан штраф в размере 2,500,000 рублей.
-                    </div>
-                </div>
-
-                <div class="card-item">
-                    <span class="badge">Дело №А41-83920/2024</span>
-                    <h3>Передача базы данных клиентов конкурирующему агентству</h3>
-                    <p style="color: #666666; font-size: 14px; margin-top: 5px;">Истец: Логистический холдинг. Ответчик: Директор по продажам.</p>
-                    <div style="font-size:12px; color:#555; margin-top:10px; background: #fafafa; padding: 10px; border-left: 3px solid #7A1C1C;">
-                        <strong>Суть спора:</strong> При увольнении сотрудник скопировал файл базы данных Excel на личный внешний накопитель. В суде ответчик утверждал, что база данных была собрана им лично из открытых источников. Суд отклонил доводы ответчика, так как структура столбцов и метаданные файла полностью совпадали с корпоративной выгрузкой из CRM. Суд взыскал сумму убытков в полном объеме.
-                    </div>
-                </div>
-
-                <div class="card-item">
-                    <span class="badge">Дело №А56-34821/2025</span>
-                    <h3>Утечка маркетинговой стратегии до официального релиза продукта</h3>
-                    <p style="color: #666666; font-size: 14px; margin-top: 5px;">Истец: Продуктовый b2c стартап. Ответчик: Внешнее PR-агентство (подрядчик).</p>
-                    <div style="font-size:12px; color:#555; margin-top:10px; background: #fafafa; padding: 10px; border-left: 3px solid #7A1C1C;">
-                        <strong>Суть спора:</strong> Подрядчик отправил презентацию продукта журналистам без предварительного согласования и без пометки о конфиденциальности. В результате сорвался эксклюзивный контракт со стратегическим инвестором. Суд удовлетворил требования истца частично, снизив штраф с 10 до 3 миллионов рублей на основании несоразмерности последствий нарушения, но признал факт грубого неисполнения MNDA.
-                    </div>
-                </div>
-
-                <div class="card-item"><span class="badge">Классификатор №001</span><h3>Риск несанкционированного доступа к API тестовых контуров</h3><p style="color:#666; font-size:14px;">Защита токенов авторизации в конфигурационных файлах фронтенд-приложений.<
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="background: #F8FAFC; border-bottom: 2px solid #E2E8F0;">
+                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">ID</th>
+                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Тип уязвимости</th>
+                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Выявленный паттерн / Триггер</th>
+                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Уровень опасности</th>
+                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Авто-директива</th>
+                    </tr>
+                </thead>
+                <tbody style="color: #334155; font-size: 14px;">
+                    <tr style="border-bottom: 1px solid #E2E8F0; transition: background 0.2s;">
+                        <td style="padding: 18px 15px; font-weight: bold; color: #7A1C1C;">TR-081</td>
+                        <td style="padding: 15px;"><i class="fa-solid fa-clock" style="color: #64748b; margin-right: 8px;"></i> Сроки соглашения</td>
+                        <td style="padding: 15px;"><strong>«Обязательства по сохранению тайны действуют бессрочно»</strong></td>
+                        <td style="padding: 15px;"><span style="background: #fef2f2; col
 
 
-: 15px; font-weight: bold; color: #7A1C1C;">TR-001</td>
-                            <td style="padding: 15px;"><strong>«Бессрочный характер обязательств»</strong>
-<small style="color:#888;">Отсутствие указания точного срока действия режима тайны.</small></td>
-                            <td style="padding: 15px;"><span style="background: #ffebee; color: #c62828; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">КРИТИЧЕСКИЙ</span></td>
-                            <td style="padding: 15px; color: #555;">Ограничить срок действия обязательств 3 или 5 годами с момента передачи данных. Бессрочные обязательства часто оспариваются в суде как ущемляющие права.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #E0E0E0;">
-                            <td style="padding: 15px; font-weight: bold; color: #7A1C1C;">TR-002</td>
-                            <td style="padding: 15px;"><strong>«Отсутствие фиксации факта передачи»</strong>
-<small style="color:#888;">Защита информации без подписания Актов или логов систем.</small></td>
-                            <td style="padding: 15px;"><span style="background: #ffebee; color: #c62828; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">КРИТИЧЕСКИЙ</span></td>
-                            <td style="padding: 15px; color: #555;">Включить пункт о том, что конфиденциальной признается только информация, переданная по защищенным каналам связи с фиксацией в реестре передачи.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #E0E0E0;">
-                            <td style="padding: 15px; font-weight: bold; color: #7A1C1C;">TR-003</td>
-                            <td style="padding: 15px;"><strong>«Штраф превышает 1,000,000 ₽ для фрилансера»</strong>
-<small style="color:#888;">Несоразмерная сумма материальной ответственности физлица.</small></td>
-                            <td style="padding: 15px;"><span style="background: #fff3e0; color: #ef6c00; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">ВЫСОКИЙ</span></td>
-                            <td style="padding: 15px; color: #555;">Снизить сумму штрафа до соразмерной стоимости контракта (не более 10-20% от общей суммы ТЗ), иначе суд снизит сумму штрафа на основании статьи 333 ГК РФ.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #E0E0E0;">
-                            <td style="padding: 15px; font-weight: bold; color: #7A1C1C;">TR-004</td>
-                            <td style="padding: 15px;"><strong>«Раскрытие по устному требованию»</strong>
-<small style="color:#888;">Допущение передачи данных третьим лицам без письменных запросов.</small></td>
-                            <td style="padding: 15px;"><span style="background: #fff3e0; color: #ef6c00; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">ВЫСОКИЙ</span></td>
-                            <td style="padding: 15px; color: #555;">Исключить любые устные формы согласования раскрытия информации. Любое раскрытие возможно только на основании мотивированного письменного согласия.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #E0E0E0;">
-                            <td style="padding: 15px; font-weight: bold; color: #7A1C1C;">TR-005</td>
-                            <td style="padding: 15px;"><strong>«Иностранная подсудность (LCIA, SCC)»</strong>
-<small style="color:#888;">Рассмотрение споров в международных арбитражах по умолчанию.</small></td>
-                            <td style="padding: 15px;"><span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold;">УМЕРЕННЫЙ</span></td>
-                            <td style="padding: 15px; color: #555;">Для b2b-сделок внутри РФ изменить подсудность на Арбитражный суд города Москвы или Санкт-Петербурга для минимизации судебных издержек.</td>
-                        </tr>
-                        <tr style="border-b
-
-
-активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков active.</span>
-                </div>
-            </section>
+or: #991b1b; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #fee2e2;"><i class="fa-solid fa-circle-xmark"></i> КРИТИЧЕСКИЙ</span></td>
+                        <td style="padding: 15px; color: #475569;">Заменить на фиксированный интервал: 3 или 5 лет с даты прекращения действия контракта.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E2E8F0;">
+                        <td style="padding: 18px 15px; font-weight: bold; color: #7A1C1C;">TR-094</td>
+                        <td style="padding: 15px;"><i class="fa-solid fa-coins" style="color: #64748b; margin-right: 8px;"></i> Штрафные санкции</td>
+                        <td style="padding: 15px;"><strong>«Штраф в размере 1 000 000 рублей за каждый случай нарушения»</strong></td>
+                        <td style="padding: 15px;"><span style="background: #fff7ed; color: #9a3412; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #ffedd5;"><i class="fa-solid fa-triangle-exclamation"></i> ВЫСОКИЙ</span></td>
+                        <td style="padding: 15px; color: #475569;">Снизить до соразмерного лимита (100-200 тыс. руб) во избежание оспаривания по ст. 333 ГК РФ.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E2E8F0;">
+                        <td style="padding: 18px 15px; font-weight: bold; color: #7A1C1C;">TR-112</td>
+                        <td style="padding: 15px;"><i class="fa-solid fa-gavel" style="color: #64748b; margin-right: 8px;"></i> Подсудность споров</td>
+                        <td style="padding: 15px;"><strong>«Все споры передаются на рассмотрение в суд по месту нахождения Истца»</strong></td>
+                        <td style="padding: 15px;"><span style="background: #f0f9ff; color: #075985; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #e0f2fe;"><i class="fa-solid fa-circle-info"></i> СРЕДНИЙ</span></td>
+                        <td style="padding: 15px; color: #475569;">Переписать на паритетных условиях: «В Арбитражном суде города Москвы».</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E2E8F0;">
+                        <td style="padding: 18px 15px; font-weight: bold; color: #7A1C1C;">TR-204</td>
+                        <td style="padding: 15px;"><i class="fa-solid fa-user-shield" style="color: #64748b; margin-right: 8px;"></i> Персональные данные</td>
+                        <td style="padding: 15px;"><strong>«Передача баз данных клиентов третьим лицам без уведомления»</strong></td>
+                        <td style="padding: 15px;"><span style="background: #fef2f2; color: #991b1b; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #fee2e2;"><i class="fa-solid fa-circle-xmark"></i> КРИТИЧЕСКИЙ</span></td>
+                        <td style="padding: 15px; color: #475569;">Прямое нарушение 152-ФЗ. Удалить или добавить пункт об обязательном письменном согласии субъектов.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-</body>
-</html>"padding
+
+    <script>
+        // 1. Линейный график (Динамика рисков)
+        const ctxLine = document.getElementById('lineChart').getContext('2d');
+        new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн'],
+                datasets: [{
+                    label: 'Выявленные критические риски',
+                    data: [32, 25, 18, 29, 14, 11],
+                    borderColor: '#7A1C1C',
+                    backgroundColor: 'rgba(122, 28, 28, 0.05)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // 2. Кругов
 
 
-/p></div>
-                <div class="card-item"><span class="badge">Классификатор №002</span><h3>Риск использования устаревших библиотек с уязвимостями (CVE)</h3><p style="color:#666; font-size:14px;">Автоматический аудит зависимостей пакетов npm и pip в CI/CD пайплайнах.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №003</span><h3>Риск отсутствия резервного копирования логов систем безопасности</h3><p style="color:#666; font-size:14px;">Хранение дампов систем журналирования на изолированных write-once серверах.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №004</span><h3>Риск двусмысленной трактовки понятия «Конфиденциальный носитель»</h3><p style="color:#666; font-size:14px;">Необходимость четкого перечисления цифровых и физических типов накопителей в тексте.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №005</span><h3>Риск компрометации корпоративных учетных записей через фишинг</h3><p style="color:#666; font-size:14px;">Внедрение обязательной двухфакторной аутентификации (2FA) для всех сотрудников.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №006</span><h3>Риск утери контроля над доменными именами и SSL-сертификатами</h3><p style="color:#666; font-size:14px;">Мониторинг дат автоматического продления регистраций критических веб-ресурсов.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №007</span><h3>Риск утечки метаданных из публикуемых PDF-документов</h3><p style="color:#666; font-size:14px;">Автоматическая очистка истории изменений, имен авторов и путей к файлам перед экспортом.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №008</span><h3>Риск хранения паролей в открытом виде в базах данных</h3><p style="color:#666; font-size:14px;">Применение алгоритмов хэширования bcrypt и argon2 с уникальной солью.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №009</span><h3>Риск передачи конфиденциальной информации через публичные мессенджеры</h3><p style="color:#666; font-size:14px;">Запрет на использование Telegram/WhatsApp для обсуждения существенных условий сделок.</p></div>
-                <div class="card-item"><span class="badge">Классификатор №010</span><h3>Риск некорректного закрытия сессий пользователей (Session Fixation)</h3><p style="color:#666; font-size:14px;">Сброс токенов доступа при изменении IP-адреса или по истечении 15 минут бездействия.</p></div>
-
-                <div style="display:none; visibility:hidden;">
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков активен. Ошибок комплаенса нет.</span>
-                    <span>Аналитическая матрица Alfa-LegalTech. Модуль скоринга рисков active.</span> 
-                </div>
-            </section>
-        </div>
-    </div>
+ой график пончика (Категории)
+        const ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+        new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Штрафы', 'Сроки', 'Подсудность', 'Данные 152-ФЗ'],
+                datasets: [{
+                    data: [40, 25, 15, 20],
+                    backgroundColor: ['#c62828', '#ef6c00', '#1565c0', '#2e7d32'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
-
