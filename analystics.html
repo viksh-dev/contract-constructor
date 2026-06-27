@@ -39,7 +39,7 @@
             </div>
             <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; border-left: 5px solid #2e7d32; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
                 <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 14px;">
-                    <span>ИНДЕКС ЗДОРОВЬЯ ДОКУМЕНТОВ</span>
+                    <span>ИИНДЕКС ЗДОРОВЬЯ ДОКУМЕНТОВ</span>
                     <i class="fa-solid fa-heart-pulse" style="color: #2e7d32;"></i>
                 </div>
                 <p style="font-size: 32px; font-weight: bold; margin: 10px 0; color: #2C2C2C;">84.2%</p>
@@ -56,64 +56,24 @@
             <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 20px; border-left: 5px solid #ef6c00; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
                 <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 14px;">
                     <span>СЭКОНОМЛЕНО НА ШТРАФАХ</span>
-                    <i
 
 
-class="fa-solid fa-gavel" style="color: #ef6c00;"></i>
-                </div>
-                <p style="font-size: 32px; font-weight: bold; margin: 10px 0; color: #2C2C2C;">18.4M ₽</p>
-                <span style="color: #2e7d32; font-size: 12px; font-weight: bold;"><i class="fa-solid fa-shield"></i> Риски заблокированы</span>
-            </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-bottom: 40px;">
-            
-            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                <h3 style="margin-top: 0; color: #2C2C2C; margin-bottom: 20px;"><i class="fa-solid fa-chart-area"></i> Динамика выявления рисков (2026)</h3>
-                <div style="position: relative; height: 300px; width: 100%;">
-                    <canvas id="lineChart"></canvas>
-                </div>
-            </div>
-
-            <div style="background: white; border: 1px solid #E0E0E0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                <h3 style="margin-top: 0; color: #2C2C2C; margin-bottom: 20px;"><i class="fa-solid fa-chart-pie"></i> Топовые категории уязвимостей</h3>
-                <div style="position: relative; height: 300px; width: 100%; display: flex; justify-content: center;">
-                    <canvas id="doughnutChart"></canvas>
-                </div>
-            </div>
-
-        </div>
-
-        <div style="background: #ffffff; border: 1px solid #E0E0E0; border-radius: 8px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
-                <div>
-                    <h2 style="margin: 0; font-size: 22px; color: #2C2C2C;">Реестр нормативных триггеров комплаенса</h2>
-                    <p style="color: #666666; margin: 5px 0 0 0; font-size: 14px;">Система автоматически вырезает опасные формулировки на основе AI-базы знаний.</p>
-                </div>
-                <span style="background: #f1f5f9; padding: 8px 15px; border-radius: 6px; font-size: 13px; font-weight: bold; color: #475569; border: 1px solid #cbd5e1;">
-                    <i class="fa-solid fa-database"></i> База данных: Активна (v4.12)
-                </span>
-            </div>
-
-            <table style="width: 100%; border-collapse: collapse; text-align: left;">
-                <thead>
-                    <tr style="background: #F8FAFC; border-bottom: 2px solid #E2E8F0;">
-                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">ID</th>
-                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Тип уязвимости</th>
-                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Выявленный паттерн / Триггер</th>
-                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Уровень опасности</th>
-                        <th style="padding: 18px 15px; color: #475569; font-weight: 700; font-size: 13px; text-transform: uppercase;">Авто-директива</th>
-                    </tr>
-                </thead>
-                <tbody style="color: #334155; font-size: 14px;">
-                    <tr style="border-bottom: 1px solid #E2E8F0; transition: background 0.2s;">
-                        <td style="padding: 18px 15px; font-weight: bold; color: #7A1C1C;">TR-081</td>
-                        <td style="padding: 15px;"><i class="fa-solid fa-clock" style="color: #64748b; margin-right: 8px;"></i> Сроки соглашения</td>
-                        <td style="padding: 15px;"><strong>«Обязательства по сохранению тайны действуют бессрочно»</strong></td>
-                        <td style="padding: 15px;"><span style="background: #fef2f2; col
+фы', 'Сроки', 'Подсудность', 'Данные 152-ФЗ'],
+                datasets: [{
+                    data: [40, 25, 15, 20],
+                    backgroundColor: ['#c62828', '#ef6c00', '#1565c0', '#2e7d32'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+        });
+    </script>
+</body>
+</html>
 
 
-or: #991b1b; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #fee2e2;"><i class="fa-solid fa-circle-xmark"></i> КРИТИЧЕСКИЙ</span></td>
+x 12px; border-radius: 20px; font-size: 11px; font-weight: bold; border: 1px solid #fee2e2;"><i class="fa-solid fa-circle-xmark"></i> КРИТИЧЕСКИЙ</span></td>
                         <td style="padding: 15px; color: #475569;">Заменить на фиксированный интервал: 3 или 5 лет с даты прекращения действия контракта.</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #E2E8F0;">
@@ -141,16 +101,14 @@ or: #991b1b; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weigh
             </table>
         </div>
     </div>
-
-    <script>
-        // 1. Линейный график (Динамика рисков)
+<script>
         const ctxLine = document.getElementById('lineChart').getContext('2d');
         new Chart(ctxLine, {
             type: 'line',
             data: {
                 labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн'],
                 datasets: [{
-                    label: 'Выявленные критические риски',
+                    label: 'Выявленные риски',
                     data: [32, 25, 18, 29, 14, 11],
                     borderColor: '#7A1C1C',
                     backgroundColor: 'rgba(122, 28, 28, 0.05)',
@@ -159,19 +117,9 @@ or: #991b1b; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weigh
                     tension: 0.3
                 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false }
-                }
-            }
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
         });
 
-        // 2. Кругов
-
-
-ой график пончика (Категории)
         const ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
         new Chart(ctxDoughnut, {
             type: 'doughnut',
@@ -184,14 +132,9 @@ or: #991b1b; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weigh
                     borderColor: '#ffffff'
                 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { position: 'bottom' }
-                }
-            }
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
         });
     </script>
 </body>
 </html>
+    
